@@ -20,24 +20,22 @@ int main(int argc, char **argv) {
 		switch (c) {
 			case 'l':
 				lower_bound = atoi(optarg);
-				printf("lower_bound: %s\n", optarg);
 				break;
 			case 'u':
 				upper_bound = atoi(optarg);
-				printf("upper_bound: %s\n", optarg);
 				break;
 		}
 	}
 	if (lower_bound == -1) {
-		fprintf(stderr, "Flag lower_bound is missing.");
+		fprintf(stderr, "Flag lower_bound is missing.\n");
 		return 1;
 	}
 	if (upper_bound == -1) {
-		fprintf(stderr, "Flag upper_bound is missing.");
+		fprintf(stderr, "Flag upper_bound is missing.\n");
 		return 1;
 	}
 	if (lower_bound > upper_bound) {
-		fprintf(stderr, "The lower bound is greater than the upper bound.");
+		fprintf(stderr, "The lower bound is greater than the upper bound.\n");
 		return 1;
 	}
 	for (int i = lower_bound; i <= upper_bound; ++i) {
