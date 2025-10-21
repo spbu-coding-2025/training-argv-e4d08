@@ -27,11 +27,11 @@ int main(int argc, char **argv) {
 		}
 	}
 	if (lower_bound == -1) {
-		fprintf(stderr, "Flag lower_bound is missing.\n");
+		fprintf(stderr, "Flag --lower_bound is missing.\n");
 		return 1;
 	}
 	if (upper_bound == -1) {
-		fprintf(stderr, "Flag upper_bound is missing.\n");
+		fprintf(stderr, "Flag --upper_bound is missing.\n");
 		return 1;
 	}
 	if (lower_bound > upper_bound) {
